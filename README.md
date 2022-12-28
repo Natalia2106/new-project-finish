@@ -16,3 +16,30 @@
 Блок-схема к задаче
 
 ![image](https://user-images.githubusercontent.com/115774966/209772281-cebe0b77-8e39-476b-a819-dc40f4f0168b.png)
+
+Программа для решения задачи:
+string[] array1=new string[5] {"hello", "2", "world", ":-)", "Russia"};
+string[] array2=new string [array1.Length];
+
+void FindArray (string[] array1, string[] array2)
+{
+    int temp=0;
+    for (int i=0; i<array1.Length; i++)
+        if (array1[i].Length<=3)
+        {
+            array2[temp]=array1[i];
+            temp++;
+        }
+}
+
+void ShowArray (string[]array)
+{
+    for (int i=0; i<array.Length; i++)
+         Console.Write(array[i] + " ");
+    Console.WriteLine();       
+}
+FindArray (array1, array2);
+ShowArray(array2);
+
+
+
